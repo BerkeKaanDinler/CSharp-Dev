@@ -1,0 +1,15 @@
+# .NET derleme çıktıları
+**/[Bb]in/
+**/[Oo]bj/
+
+# Yerel IDE ve işletim sistemi dosyaları
+.vs/
+.idea/
+*.user
+*.suo
+.DS_Store
+
+# Yerel ortam değişkenleri
+.env
+.env.*
+!.env.example
