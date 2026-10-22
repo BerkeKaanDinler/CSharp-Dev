@@ -262,9 +262,127 @@ for (int i = 0; i< numbers.Length;i++)
     
     Console.WriteLine($"{i + 1}. sayı: {numbers[i]}");
 }
-
-
-
-
 // Dizideki sayıları sırayla ekrana yazdır.
 
+
+
+
+
+
+
+int[] notlar = new int[5];
+
+Console.WriteLine("===== ÖĞRENCİ NOT KAYIT SİSTEMİ =====");
+
+// 1. Öğrencilerin notlarını al
+for (int i = 0; i < notlar.Length; i++)
+{
+    int not;
+
+    // Geçerli not girilene kadar tekrar sor
+    while (true)
+    {
+        Console.Write($"{i + 1}. öğrencinin notunu giriniz: ");
+
+        bool sonuc = int.TryParse(Console.ReadLine(), out not);
+
+        if (sonuc && not >= 0 && not <= 100)
+        {
+            break;
+        }
+
+        Console.WriteLine("Hatalı giriş! 0-100 arasında bir sayı giriniz.");
+    }
+
+    // Geçerli notu diziye kaydet
+    notlar[i] = not;
+}
+
+// 2. Kaydedilen notları ekrana yazdır
+Console.WriteLine("\n===== KAYDEDİLEN NOTLAR =====");
+
+foreach (int not in notlar)
+{
+    Console.WriteLine(not);
+}
+
+
+
+
+
+
+
+
+
+int[] notlar = new int[5];
+
+int toplamNot = 0;
+int basariliCount = 0;
+int basarisizCount = 0;
+
+Console.WriteLine("===== ÖĞRENCİ NOT ANALİZ SİSTEMİ =====");
+
+// 1. Öğrencilerin notlarını güvenli şekilde al
+for (int i = 0; i < notlar.Length; i++)
+{
+    int not;
+
+    while (true)
+    {
+        Console.Write($"{i + 1}. öğrencinin notunu giriniz: ");
+
+        bool sonuc = int.TryParse(Console.ReadLine(), out not);
+
+        if (sonuc && not >= 0 && not <= 100)
+        {
+            break;
+        }
+
+        Console.WriteLine("Hatalı giriş! 0-100 arasında bir sayı giriniz.");
+    }
+
+    notlar[i] = not;
+}
+
+// 2. En yüksek ve en düşük notu belirlemek için
+// ilk öğrencinin notunu başlangıç kabul et
+int enYuksekNot = notlar[0];
+int enDusukNot = notlar[0];
+
+// 3. Bütün notları analiz et
+foreach (int not in notlar)
+{
+    toplamNot += not;
+
+    if (not >= 50)
+    {
+        basariliCount++;
+    }
+    else
+    {
+        basarisizCount++;
+    }
+
+    if (not > enYuksekNot)
+    {
+        enYuksekNot = not;
+    }
+
+    if (not < enDusukNot)
+    {
+        enDusukNot = not;
+    }
+}
+
+// 4. Ortalamayı hesapla
+double ortalama = (double)toplamNot / notlar.Length;
+
+// 5. Sonuçları ekrana yazdır
+Console.WriteLine("\n===== ANALİZ SONUÇLARI =====");
+
+Console.WriteLine($"Toplam not: {toplamNot}");
+Console.WriteLine($"Not ortalaması: {ortalama:F1}");
+Console.WriteLine($"Başarılı öğrenci: {basariliCount}");
+Console.WriteLine($"Başarısız öğrenci: {basarisizCount}");
+Console.WriteLine($"En yüksek not: {enYuksekNot}");
+Console.WriteLine($"En düşük not: {enDusukNot}");
