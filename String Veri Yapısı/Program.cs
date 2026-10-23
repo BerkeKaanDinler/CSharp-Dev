@@ -1,4 +1,5 @@
 ﻿// string tanımlama
+/*
 string message = "merhaba";
 Console.WriteLine("ilk mesaj : " + message);
 
@@ -26,5 +27,41 @@ foreach (char c in message)
 Console.WriteLine("karakter sayısı : " + message.Length);
 Console.WriteLine("büyük harf : " + message.ToUpper());
 Console.WriteLine("dünya içeriyor mu? " + message.Contains("dünya"));
+
+Console.ReadKey();    */
+
+
+
+
+
+// OTP
+
+// ASCII 65 - 90 (A-Z)
+Random rnd = new Random();
+string userCode = "";
+
+Console.WriteLine("ASCII KARAKTERİ (A-Z)");
+
+for (int code =65 ; code <= 90; code++)
+{
+    char letter = (char)code;
+    Console.Write(letter + " ");
+}
+
+
+Console.WriteLine("\n");
+// 6 haneli kullanıcı kodu
+
+for (int i = 0; i < 6; i++)
+{
+    int ascii = rnd.Next(65,91); // 65 90 arası rastgele sayı
+    char randomLetter = (char)ascii;
+    userCode+=randomLetter; // stringleri birleştiriyorum
+}
+
+Console.WriteLine($"oluşturulan kullanıcı kodu : {userCode}");
+
+
+
 
 Console.ReadKey();
