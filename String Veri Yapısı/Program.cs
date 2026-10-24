@@ -72,7 +72,7 @@ Console.ReadKey();   */
 
 
 
-
+/*
 Console.WriteLine("adınızı giriniz");
 string firstName = Console.ReadLine();
 
@@ -96,9 +96,68 @@ Console.WriteLine(welcome3);
 
 Console.ReadKey();
 
+*/
+
+
+
+
+/*
+
+// kaçış karakterleri 
+string report = "Log raporu:\n\t- kullanıcı: admin\n\t- işlem : yedekleme";
+Console.WriteLine(report);
+
+
+// dosya yolları
+string path1 = "C:\\users\\admin\\documents\\data.txt";
+Console.WriteLine("kaçış karakteri ile yol: " + path1);
+
+// verbatim
+
+string path2 = @"C:\users\admin\documents\data.txt";
+Console.WriteLine("verbatim ile yol: " + path2);
+
+
+// JSON
+string jsonEscaped = "{\"username\" : \"admin\"}";
+Console.WriteLine("JSON çıkışı: " + jsonEscaped);
+
+
+// JSON verbatim
+
+Console.WriteLine("\nJSON verbatim:");
+string jsonVerbatim = @"{
+""username"":""admin"",
+""status"":""active""
+}";
+Console.WriteLine(jsonVerbatim);
+
+Console.ReadKey();
+*/
 
 
 
 
 
 
+
+
+
+// örnekler
+var a = "İstanbul";
+var b = "istanbul";
+var c = "Istanbul";
+
+System.Console.WriteLine("== vs Equal");
+System.Console.WriteLine($"{a}=={b} ? {a == b}");
+
+    System.Console.WriteLine($"Equals ([a],{b}, StringComparison.OrdinalIgnoreCase) ? " +
+    $"{string.Equals(a,b, StringComparison.OrdinalIgnoreCase)}");
+
+    System.Console.WriteLine($"Equals ([a],{b}, StringComparison.CurrentCultureIgnoreCase) ? " +
+    $"{string.Equals(a,b, StringComparison.CurrentCultureIgnoreCase)}");
+
+
+
+
+Console.ReadKey();
