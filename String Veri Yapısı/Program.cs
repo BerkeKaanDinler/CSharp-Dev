@@ -37,6 +37,7 @@ Console.ReadKey();    */
 // OTP
 
 // ASCII 65 - 90 (A-Z)
+/*
 Random rnd = new Random();
 string userCode = "";
 
@@ -62,6 +63,42 @@ for (int i = 0; i < 6; i++)
 Console.WriteLine($"oluşturulan kullanıcı kodu : {userCode}");
 
 
+Console.ReadKey();   */
 
+
+
+
+
+
+
+
+
+Console.WriteLine("adınızı giriniz");
+string firstName = Console.ReadLine();
+
+Console.WriteLine("soyadınızı giriniz: ");
+string lastName = Console.ReadLine();
+
+// + operatörü
+string welcome1 = "merhaba " + firstName + " " + lastName + " , sisteme hoş geldiniz.";
+
+// Concat
+string welcome2 = String.Concat("Sayın " , firstName, " ", lastName, " , girişinizi başarı ile gerçekleştirdiniz.");
+
+
+// interpolasyon
+
+string welcome3 = $"hoş geldiniz {firstName} {lastName?.ToUpper()} {DateTime.Now:dd.MM.yyyy}";
+
+Console.WriteLine(welcome1);
+Console.WriteLine(welcome2);
+Console.WriteLine(welcome3);
 
 Console.ReadKey();
+
+
+
+
+
+
+
