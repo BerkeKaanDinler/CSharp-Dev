@@ -140,10 +140,9 @@ Console.ReadKey();
 
 
 
-
-
-
 // örnekler
+
+/*
 var a = "İstanbul";
 var b = "istanbul";
 var c = "Istanbul";
@@ -161,3 +160,59 @@ System.Console.WriteLine($"{a}=={b} ? {a == b}");
 
 
 Console.ReadKey();
+
+*/
+
+
+
+
+
+var cities = new List<String> {"izmir",
+"İzmir",
+"Isparta",
+"isparta",
+"Istanbul",
+"istanbul",
+"samsun",
+"van",
+"adana",
+};
+
+// ordinal sıralama
+var ordinalSorted = new List<string>(cities);
+ordinalSorted.Sort(StringComparer.Ordinal);
+
+foreach (var item in ordinalSorted)
+{
+    System.Console.WriteLine(item);
+}
+
+// CurrentCultureIgnoreCase
+
+System.Console.WriteLine($"\n{new string('-',10)}");
+var culturelSorted = new List<string>(cities);
+culturelSorted.Sort(StringComparer.CurrentCultureIgnoreCase);
+foreach (var item in culturelSorted)
+{
+    System.Console.WriteLine(item);
+}
+
+
+
+Console.ReadKey();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
