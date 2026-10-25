@@ -270,12 +270,12 @@ for (int i = 0; i< numbers.Length;i++)
 
 
 
-int[] notlar = new int[5];
+int[] kayitNotlari = new int[5];
 
 Console.WriteLine("===== ÖĞRENCİ NOT KAYIT SİSTEMİ =====");
 
 // 1. Öğrencilerin notlarını al
-for (int i = 0; i < notlar.Length; i++)
+for (int i = 0; i < kayitNotlari.Length; i++)
 {
     int not;
 
@@ -295,13 +295,13 @@ for (int i = 0; i < notlar.Length; i++)
     }
 
     // Geçerli notu diziye kaydet
-    notlar[i] = not;
+    kayitNotlari[i] = not;
 }
 
 // 2. Kaydedilen notları ekrana yazdır
 Console.WriteLine("\n===== KAYDEDİLEN NOTLAR =====");
 
-foreach (int not in notlar)
+foreach (int not in kayitNotlari)
 {
     Console.WriteLine(not);
 }

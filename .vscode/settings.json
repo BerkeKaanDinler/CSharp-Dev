@@ -1,9 +1,15 @@
 {
     "editor.inlineSuggest.enabled": false,
     "editor.quickSuggestions": {
-        "other": "off",
+        "other": "on",
         "comments": "off",
         "strings": "off"
     },
-    "editor.suggestOnTriggerCharacters": false
+    "editor.quickSuggestionsDelay": 500,
+    "editor.suggestOnTriggerCharacters": true,
+    "editor.suggest.preview": false,
+    "editor.suggest.selectionMode": "never",
+    "editor.acceptSuggestionOnEnter": "off",
+    "editor.acceptSuggestionOnCommitCharacter": false,
+    "dotnet.defaultSolution": "CSharpEgitim.slnx"
 }

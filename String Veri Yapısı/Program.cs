@@ -1,4 +1,6 @@
-﻿// string tanımlama
+﻿using System.Globalization;
+
+// string tanımlama
 /*
 string message = "merhaba";
 Console.WriteLine("ilk mesaj : " + message);
@@ -166,7 +168,7 @@ Console.ReadKey();
 
 
 
-
+/*
 var cities = new List<String> {"izmir",
 "İzmir",
 "Isparta",
@@ -197,9 +199,71 @@ foreach (var item in culturelSorted)
     System.Console.WriteLine(item);
 }
 
+Console.ReadKey();
+*/
+
+
+
+
+// örnek
+// fiş |farklı kültrlere duyarlı
+
+string product = "USB-C Cable";
+int quantity = 3;
+decimal unitPrice = 149.90m;
+var now = DateTime.Now;
+
+Console.WriteLine("\n");
+
+PrintReceipt(product,
+quantity,
+unitPrice,
+now,
+new CultureInfo("en-US"),
+"EN (en-US)");
+
+void PrintReceipt(string product,
+ int quantity, 
+ decimal unitPrice,
+DateTime when,
+ CultureInfo ci,
+string title)
+{
+    decimal total = unitPrice * quantity;
+
+    //başlık 
+    Console.WriteLine(title);
+    Console.WriteLine(new string('=',title.Length));
+    
+    
+//tarih ve saat
+Console.WriteLine($"Date: {when.ToString("d",ci)}" +
+    $" Time:{when.ToString("t",ci)}");
+
+
+
+
+    // Tablo başlığı
+    Console.WriteLine($"\n{"Product",-20}" +
+    $"{"Quantity",5}"+
+    $"{"Unit",12}" +
+    $"{"Total",12}");
+
+    System.Console.WriteLine(new String ('-',20+5+24+5));
+
+    System.Console.WriteLine($"\n{product,-20}" +
+    $"{quantity,5:N0}" +
+    $"{unitPrice.ToString("C2",ci),12}" +
+    $"{total.ToString("C2",ci),12}");
+
+
+
+}
+
 
 
 Console.ReadKey();
+
 
 
 

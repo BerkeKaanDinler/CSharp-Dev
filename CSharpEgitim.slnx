@@ -1,0 +1,10 @@
+<Solution>
+  <Folder Name="/Diziler ve List/">
+    <Project Path="Diziler ve List/DizilerVeList.csproj" />
+  </Folder>
+  <Folder Name="/String Veri Yapısı/">
+    <Project Path="String Veri Yapısı/StringVeriYapisi.csproj" />
+  </Folder>
+  <Project Path="ConsoleApp1/ConsoleApp1.csproj" />
+  <Project Path="Döngüler/Döngüler.csproj" />
+</Solution>
