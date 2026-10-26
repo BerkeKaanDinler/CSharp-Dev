@@ -2,6 +2,9 @@
   <Folder Name="/Diziler ve List/">
     <Project Path="Diziler ve List/DizilerVeList.csproj" />
   </Folder>
+  <Folder Name="/String Veri Yapıları Örnekleme ve Çalışma/">
+    <Project Path="String Veri Yapıları Örnekleme ve Çalışma/StringVeriYapilariOrneklemeVeCalisma.csproj" />
+  </Folder>
   <Folder Name="/String Veri Yapısı/">
     <Project Path="String Veri Yapısı/StringVeriYapisi.csproj" />
   </Folder>

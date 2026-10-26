@@ -7,6 +7,7 @@ C# öğrenirken yaptığım alıştırmaları ve projeleri bu repoda biriktiriyo
 - `Döngüler/Program.cs`: Döngüler, koşullar, sayı toplama, en büyük ve en küçük sayıyı bulma ve menülü sayı analiz programı. Önceki alıştırmalar yorum bloklarında saklanıyor.
 - `Diziler ve List/Program.cs`: Dizi ve liste alıştırmaları için yeni konsol projesi.
 - `String Veri Yapısı/Program.cs`: String (metin) alıştırmaları için konsol projesi.
+- `String Veri Yapıları Örnekleme ve Çalışma/Program.cs`: String örnekleri ve çalışmalar için ayrı konsol projesi.
 - `ConsoleApp1/`: `while` döngüsü ve `continue` kullanımı üzerine ayrı bir konsol projesi.
 
 ## Çalıştırma
@@ -29,6 +30,12 @@ String Veri Yapısı projesini çalıştırmak için:
 
 ```bash
 dotnet run --project "String Veri Yapısı/StringVeriYapisi.csproj"
+```
+
+String Veri Yapıları Örnekleme ve Çalışma projesini çalıştırmak için:
+
+```bash
+dotnet run --project "String Veri Yapıları Örnekleme ve Çalışma/StringVeriYapilariOrneklemeVeCalisma.csproj"
 ```
 
 ConsoleApp1 projesini çalıştırmak için:
