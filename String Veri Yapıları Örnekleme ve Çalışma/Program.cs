@@ -76,7 +76,7 @@ foreach (char c in text)
 
 
 
-
+/*
 Console.Write("Adınızı giriniz: ");
 string? firstName = Console.ReadLine();
 
@@ -108,7 +108,57 @@ Console.WriteLine("\n===== SONUÇLAR =====");
 Console.WriteLine(welcome1);
 Console.WriteLine(welcome2);
 Console.WriteLine(welcome3);
-Console.WriteLine(welcome4);
+Console.WriteLine(welcome4); */
+
+
+
+
+
+
+
+ // 1. Kaçış karakterleri
+string report = "Log raporu:\n\t- kullanıcı: admin\n\t- işlem: yedekleme";
+
+Console.WriteLine(report);
+
+// 2. Normal string ile dosya yolu
+string path1 = "C:\\users\\admin\\documents\\data.txt";
+
+Console.WriteLine("\nNormal dosya yolu:");
+Console.WriteLine(path1);
+
+// 3. Verbatim string ile dosya yolu
+string path2 = @"C:\users\admin\documents\data.txt";
+
+Console.WriteLine("\nVerbatim dosya yolu:");
+Console.WriteLine(path2);
+
+// 4. Normal string ile JSON
+string jsonEscaped = "{\"username\":\"admin\"}";
+
+Console.WriteLine("\nJSON normal:");
+Console.WriteLine(jsonEscaped);
+
+// 5. Verbatim string ile JSON
+string jsonVerbatim = @"{
+    ""username"": ""admin"",
+    ""status"": ""active""
+}";
+
+Console.WriteLine("\nJSON verbatim:");
+Console.WriteLine(jsonVerbatim);
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
