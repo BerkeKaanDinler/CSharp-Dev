@@ -116,6 +116,7 @@ Console.WriteLine(welcome4); */
 
 
 
+/*
  // 1. Kaçış karakterleri
 string report = "Log raporu:\n\t- kullanıcı: admin\n\t- işlem: yedekleme";
 
@@ -146,7 +147,41 @@ string jsonVerbatim = @"{
 }";
 
 Console.WriteLine("\nJSON verbatim:");
-Console.WriteLine(jsonVerbatim);
+Console.WriteLine(jsonVerbatim);    
+*/
+
+
+Random rnd = new Random();
+
+string userCode = "";
+
+// 1. ASCII ile A-Z karakterlerini göster
+Console.WriteLine("ASCII KARAKTERLERİ (A-Z)");
+
+for (int code = 65; code <= 90; code++)
+{
+    char letter = (char)code;
+
+    Console.Write(letter + " ");
+}
+
+Console.WriteLine("\n");
+
+// 2. Altı karakterli kullanıcı kodu oluştur
+for (int i = 0; i < 6; i++)
+{
+    int ascii = rnd.Next(65, 91);
+
+    char randomLetter = (char)ascii;
+
+    userCode += randomLetter;
+}
+
+// 3. Sonucu göster
+Console.WriteLine($"Oluşturulan kullanıcı kodu: {userCode}");
+
+Console.WriteLine($"Kod uzunluğu: {userCode.Length}");
+
 
 
 
